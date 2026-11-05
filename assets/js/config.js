@@ -4,7 +4,7 @@
   place you need to change them.
 */
 window.BC_CONFIG = {
-  brand: 'BambooCult',
+  brand: 'BambuCult',
 
   // Country code + number, digits only. Example for India: '919876543210'
   whatsapp: '910000000000',

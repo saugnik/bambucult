@@ -16,7 +16,7 @@ const PAGES = ['index.html', 'catalogue.html', 'product.html', 'enquiry.html', '
 // Until that file exists, the placeholder in logo.html is used.
 const inlineLogo = path.join(ROOT, 'brand', 'logo-inline.svg');
 const LOGO = fs.existsSync(inlineLogo)
-  ? `<a class="{{class}}" href="index.html" aria-label="BambooCult, home">${fs.readFileSync(inlineLogo, 'utf8').trim().replace('<svg ', '<svg class="brand__logo" ')}</a>`
+  ? `<a class="{{class}}" href="index.html" aria-label="BambuCult, home">${fs.readFileSync(inlineLogo, 'utf8').trim().replace('<svg ', '<svg class="brand__logo" ')}</a>`
   : fs.readFileSync(path.join(__dirname, 'logo.html'), 'utf8').trim();
 
 // The type links are built from the catalogue itself, so the menu can never point at
@@ -172,7 +172,7 @@ ${MENU.map(m => `            <li><a href="${m.href}">${esc(m.label)}</a></li>`).
         </div>
       </div>
       <div class="footer__base">
-        <p>© <span data-year></span> BambooCult. All prices on request.</p>
+        <p>© <span data-year></span> BambuCult. All prices on request.</p>
         <p>Product photos are for illustration. Ask us for photos of current stock.</p>
       </div>
     </div>

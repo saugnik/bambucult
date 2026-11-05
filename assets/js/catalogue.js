@@ -97,7 +97,7 @@
     els.title.textContent = cat ? cat.name : defaultTitle;
     els.blurb.textContent = cat ? cat.blurb : defaultBlurb;
     els.crumb.textContent = cat ? cat.name : 'Catalogue';
-    document.title = (cat ? cat.name + ' · ' : '') + 'Catalogue · BambooCult';
+    document.title = (cat ? cat.name + ' · ' : '') + 'Catalogue · BambuCult';
 
     els.engrave.setAttribute('aria-pressed', state.engrave);
     els.sort.value = state.sort;

@@ -1,4 +1,4 @@
-# BambooCult catalogue website
+# BambuCult catalogue website
 
 A B2B catalogue with no prices and no checkout. Buyers browse, add products to an
 enquiry list with rough quantities, and send that list to you on WhatsApp or by email.

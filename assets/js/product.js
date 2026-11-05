@@ -19,7 +19,7 @@
   const unit = p.unit || 'units';
   BC.setNav(cat.id);
 
-  document.title = `${p.name} · BambooCult`;
+  document.title = `${p.name} · BambuCult`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = `${p.name} (${p.code}). ${p.desc} Prices on request for bulk orders.`;
 

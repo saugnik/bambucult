@@ -10,7 +10,7 @@
 
   /* Buyer details are remembered in this browser so a returning buyer
      doesn't have to type them again. */
-  const DETAILS_KEY = 'bamboocult:buyer';
+  const DETAILS_KEY = 'bambucult:buyer';
   const fields = ['name', 'company', 'phone', 'city', 'email', 'notes'];
 
   try {

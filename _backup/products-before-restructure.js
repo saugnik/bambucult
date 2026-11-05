@@ -1,5 +1,5 @@
 /*
-  BambooCult catalogue data.
+  BambuCult catalogue data.
 
   Photos are matched to products by code, not by name:
     images/products/BC-103.jpg      main photo

@@ -1,4 +1,4 @@
-/* BambooCult — shared helpers used on every page */
+/* BambuCult — shared helpers used on every page */
 
 (() => {
   'use strict';
@@ -105,7 +105,7 @@
 
   /* Enquiry list (kept in this browser only) */
 
-  const KEY = 'bamboocult:enquiry';
+  const KEY = 'bambucult:enquiry';
   let items = null;
 
   const load = () => {
