@@ -1,0 +1,5 @@
+https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400&display=swap
+
+lockup.svg: the wordmark is <text> in Libre Caslon Text, regular 400, roman (size, letter-spacing and kerning are set in the file).
+The website already loads this family, so an inline lockup needs nothing extra there.
+mark.svg, seal.svg and favicon.svg: none (pure shapes).

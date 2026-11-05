@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.16 56" role="img" aria-label="BambooCult">
+  <title>BambooCult</title>
+  <path style="fill:var(--bc-mark, #2e4a33)" d="M16 2.702V36H1.167A28 28 0 0 1 16 2.702ZM2.702 40H16V53.298A28 28 0 0 1 2.702 40ZM36 1.167V54.833A28 28 0 0 1 20 54.833V1.167A28 28 0 0 1 36 1.167ZM53.298 16H40V2.702A28 28 0 0 1 53.298 16ZM40 20H54.833A28 28 0 0 1 40 53.298V20Z"/>
+  <text x="71.253" y="40" dx="0 0 0 0 0 -0.512" textLength="272.222" lengthAdjust="spacing" style="font-family:'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif; font-size:34.133px; font-weight:500; letter-spacing:5.12px; font-kerning:normal; fill:var(--bc-ink, #1c221d)">BAMBOO<tspan dx="-0.341 0 0 -1.365" style="font-weight:500; fill:var(--bc-accent, #8a6430)">CULT</tspan></text>
+</svg>

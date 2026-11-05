@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1400">
+<title>BambooCult · Culm monogram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap">
+<style>
+:root {
+  --paper: #f3efe6; --paper-2: #e9e3d6; --card: #faf8f3; --ink: #1c221d; --ink-2: #4b524b; --ink-3: #737a71;
+  --line: #d9d1c0; --line-2: #c5baa4; --leaf: #2e4a33; --leaf-deep: #213726; --culm: #8a6430; --culm-soft: #e3d2b1;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace; --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --serif: 'Libre Caslon Text', Georgia, serif; --display: 'Libre Caslon Display', Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1400px; height: 1000px; overflow: hidden; background: var(--paper); color: var(--ink); }
+body { font: 400 13px/1.45 var(--sans); -webkit-font-smoothing: antialiased; }
+.sheet { position: relative; width: 1400px; height: 1000px; }
+.abs { position: absolute; }
+.lbl { font: 500 10.5px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.lbl b { color: var(--ink); font-weight: 500; margin-right: 8px; }
+.topbar { left: 36px; right: 36px; top: 26px; height: 34px; display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--ink); }
+.panel { border: 1px solid var(--line); }
+.panel > .lbl { position: absolute; left: 18px; top: 16px; }
+.panel > .meta { position: absolute; left: 18px; bottom: 15px; font: 400 10.5px/1 var(--mono); letter-spacing: .06em; color: var(--ink-3); }
+.center { display: flex; align-items: center; justify-content: center; }
+.bc-lockup, .bc-mark { display: block; }
+
+/* A */
+.pA { left: 36px; top: 78px; width: 884px; height: 398px; }
+.pA .bc-lockup { width: 720px; height: auto; margin-top: -34px; }
+.consfig { position: absolute; right: 22px; bottom: 13px; margin: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
+.consfig figcaption { width: 360px; font: 400 10px/1.5 var(--mono); letter-spacing: .03em; color: var(--ink-3); text-align: right; }
+.cons { display: block; }
+/* D */
+.pD { left: 940px; top: 78px; width: 424px; height: 398px; }
+.sizes { display: flex; align-items: flex-end; gap: 26px; }
+.sz { margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
+.sz__box { display: flex; align-items: flex-end; }
+.sz figcaption { font: 400 10px/1 var(--mono); color: var(--ink-3); letter-spacing: .06em; }
+.row2col { color: var(--leaf); }
+.row1col { color: var(--ink); }
+.row1col .bc-c { fill: currentColor; }
+.rowtag { font: 400 10px/1 var(--mono); letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 14px; }
+/* B */
+.pB { left: 36px; top: 496px; width: 640px; height: 262px; background: var(--ink); border-color: var(--ink); }
+.pB > .lbl, .pB > .meta { color: #8f978c; }
+.pB > .lbl b { color: #e4e0d4; }
+.pB .bc-lockup { width: 470px; height: auto; color: var(--paper); }
+.pB .bc-b { fill: var(--paper); }
+.pB .bc-c { fill: var(--culm-soft); }
+/* E */
+.pE { left: 696px; top: 496px; width: 668px; height: 262px; }
+.favrow { position: absolute; left: 22px; right: 18px; top: 48px; bottom: 30px; display: flex; align-items: center; gap: 26px; }
+.fv { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 0; }
+.fv figcaption { font: 400 10px/1 var(--mono); color: var(--ink-3); letter-spacing: .06em; text-align: center; }
+.zoom { image-rendering: pixelated; display: block; outline: 1px solid var(--line); }
+.tab { width: 200px; height: 36px; background: var(--card); border: 1px solid var(--line); border-bottom: 0; border-radius: 9px 9px 0 0; display: flex; align-items: center; gap: 9px; padding: 0 12px; font: 400 12px/1 var(--sans); color: var(--ink-2); white-space: nowrap; overflow: hidden; }
+.tab span { overflow: hidden; text-overflow: ellipsis; }
+.tab i { margin-left: auto; font-style: normal; color: var(--ink-3); }
+.tabbar { background: var(--paper-2); padding: 8px 10px 0; border: 1px solid var(--line); border-bottom: 0; border-radius: 6px 6px 0 0; }
+.addr { height: 14px; background: var(--card); border: 1px solid var(--line); border-top: 0; }
+/* C */
+.pC { left: 36px; top: 778px; width: 1328px; height: 104px; }
+.hdr { position: absolute; left: 18px; right: 18px; top: 34px; height: 56px; display: flex; align-items: center; gap: 36px; padding: 0 22px; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hdr .bc-lockup { height: 32px; width: auto; }
+.hdr nav { display: flex; gap: 28px; margin-left: auto; font: 400 15px/1 var(--sans); color: var(--ink-2); }
+.hdr nav a { color: inherit; text-decoration: none; padding: 6px 0; }
+.hdr nav a:first-child { color: var(--ink); border-bottom: 1px solid var(--ink); }
+.hdr .pill { font: 500 12px/1 var(--mono); letter-spacing: .06em; border: 1px solid var(--ink); padding: 8px 12px; color: var(--ink); }
+/* F */
+.cap { left: 36px; right: 36px; top: 900px; height: 70px; border-top: 1px solid var(--ink); display: flex; align-items: baseline; gap: 22px; padding-top: 18px; }
+.cap h1 { margin: 0; font: 400 30px/1 var(--display); letter-spacing: -.005em; white-space: nowrap; }
+.cap h1 em { font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--culm); }
+.cap p { margin: 0; font: 400 15px/1.45 var(--serif); color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="abs topbar">
+    <span class="lbl"><b>BambooCult</b>Identity study · Mark &amp; lockup</span>
+    <span class="lbl">Concept · <b style="margin:0">Culm monogram</b></span>
+    <span class="lbl">Sheet BC–M01 · 1400 × 1000</span>
+  </header>
+
+  <section class="abs panel pA center">
+    <span class="lbl"><b>A</b>Primary lockup · two colour on paper</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bc-lockup" viewBox="-3.5 -3.2 627.83 106.4" color="#1c221d" role="img" aria-label="BambooCult"><path class="bc-b" fill="#2e4a33" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/><text class="bc-word" x="164.03" y="80.72" fill="currentColor" font-family="'Libre Caslon Display', 'Libre Caslon Text', Georgia, serif" font-size="96" font-weight="400" letter-spacing="1.15">BambooCult</text></svg>
+    <span class="meta">Leaf #2E4A33 · Culm #8A6430 · Ink #1C221D — wordmark Libre Caslon Display</span>
+    <figure class="consfig"><svg class="cons" viewBox="-13.5 -12 194.4 124" width="148" height="94.4" aria-hidden="true"><path fill="#e4dccb" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path fill="#ead9bb" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/><g stroke="#8a6430" stroke-width="0.9" fill="none"><line x1="-11.5" y1="25.50" x2="148.9" y2="25.50" /><line x1="-11.5" y1="74.50" x2="148.9" y2="74.50" /><line x1="132.91" y1="-8" x2="132.91" y2="108" stroke-dasharray="2.2 2.2"/></g><g font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#8f938a" letter-spacing=".5"><text x="151.9" y="27.70">NODE</text><text x="151.9" y="76.70">NODE</text><text x="135.91" y="-4.5">SPLIT</text></g></svg><figcaption>Construction · the C opens between the B’s two nodes;<br>both of its ends lie on one split line</figcaption></figure>
+  </section>
+
+  <section class="abs panel pD">
+    <span class="lbl"><b>D</b>The mark · 96 / 48 / 32 / 16 px</span>
+    <div class="abs" style="left:18px;top:62px">
+      <div class="rowtag">Two colour</div>
+      <div class="sizes row2col"><figure class="sz"><div class="sz__box" style="height:96px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="96" width="125.15" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>96</figcaption></figure><figure class="sz"><div class="sz__box" style="height:48px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="48" width="62.58" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>48</figcaption></figure><figure class="sz"><div class="sz__box" style="height:32px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="32" width="41.72" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>32</figcaption></figure><figure class="sz"><div class="sz__box" style="height:16px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="16" width="20.86" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>16</figcaption></figure></div>
+    </div>
+    <div class="abs" style="left:18px;top:232px">
+      <div class="rowtag">One colour</div>
+      <div class="sizes row1col"><figure class="sz"><div class="sz__box" style="height:96px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="96" width="125.15" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>96</figcaption></figure><figure class="sz"><div class="sz__box" style="height:48px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="48" width="62.58" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>48</figcaption></figure><figure class="sz"><div class="sz__box" style="height:32px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="32" width="41.72" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>32</figcaption></figure><figure class="sz"><div class="sz__box" style="height:16px"><svg xmlns="http://www.w3.org/2000/svg" class="bc-mark" viewBox="-3 -2.7 137.41 105.4" height="16" width="20.86" role="img" aria-label="BambooCult monogram"><path class="bc-b" fill="currentColor" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/></svg></div><figcaption>16</figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="abs panel pB center">
+    <span class="lbl"><b>B</b>Reversed on ink</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="bc-lockup is-reversed" viewBox="-3.5 -3.2 627.83 106.4" color="#1c221d" role="img" aria-label="BambooCult"><path class="bc-b" fill="#2e4a33" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/><text class="bc-word" x="164.03" y="80.72" fill="currentColor" font-family="'Libre Caslon Display', 'Libre Caslon Text', Georgia, serif" font-size="96" font-weight="400" letter-spacing="1.15">BambooCult</text></svg>
+    <span class="meta">Paper #F3EFE6 · Culm-soft #E3D2B1 on Ink #1C221D</span>
+  </section>
+
+  <section class="abs panel pE">
+    <span class="lbl"><b>E</b>Favicon · leaf-deep #213726, mark culm-soft</span>
+    <div class="favrow">
+      <figure class="fv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" class="bc-fav" id="fav-src"><rect width="32" height="32" rx="6" fill="#213726"/><g fill="#e3d2b1" transform="translate(2 6) scale(0.2)"><path d="M0 0L35 0C50 0 60 10 60 25C60 33.77 56.58 40.83 50.75 45.18C58.14 50.34 62.5 59.06 62.5 70C62.5 88 50.7 100 33 100L0 100L0 75Q10 75 20 75L20 90L28 90C37.28 90 42.5 82.8 42.5 70C42.5 57.2 37.28 50 28 50L20 50L20 70Q10 70 0 70L0 30Q10 30 20 30L20 40L28 40C35.68 40 40 34.6 40 25C40 15.4 35.68 10 28 10L20 10L20 25Q10 25 0 25Z"/><path d="M132.5 7.51C126.51 2.7 119.25 0 111.2 0C88.75 0 72.5 21 72.5 50C72.5 79 88.75 100 111.2 100C119.8 100 127.49 96.92 133.7 91.49L133.7 79.33C129.51 86.13 123.59 90 116.5 90C102.1 90 92.5 74 92.5 50C92.5 26 102.1 10 116.5 10C122.93 10 128.41 13.19 132.5 18.87Z"/></g></svg><figcaption>32</figcaption></figure>
+      <figure class="fv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" class="bc-fav"><rect width="32" height="32" rx="6" fill="#213726"/><g fill="#e3d2b1" transform="translate(2 6) scale(0.2)"><path d="M0 0L35 0C50 0 60 10 60 25C60 33.77 56.58 40.83 50.75 45.18C58.14 50.34 62.5 59.06 62.5 70C62.5 88 50.7 100 33 100L0 100L0 75Q10 75 20 75L20 90L28 90C37.28 90 42.5 82.8 42.5 70C42.5 57.2 37.28 50 28 50L20 50L20 70Q10 70 0 70L0 30Q10 30 20 30L20 40L28 40C35.68 40 40 34.6 40 25C40 15.4 35.68 10 28 10L20 10L20 25Q10 25 0 25Z"/><path d="M132.5 7.51C126.51 2.7 119.25 0 111.2 0C88.75 0 72.5 21 72.5 50C72.5 79 88.75 100 111.2 100C119.8 100 127.49 96.92 133.7 91.49L133.7 79.33C129.51 86.13 123.59 90 116.5 90C102.1 90 92.5 74 92.5 50C92.5 26 102.1 10 116.5 10C122.93 10 128.41 13.19 132.5 18.87Z"/></g></svg><figcaption>16</figcaption></figure>
+      <figure class="fv"><canvas class="zoom" data-px="32" width="32" height="32" style="width:128px;height:128px"></canvas><figcaption>32 px ×4</figcaption></figure>
+      <figure class="fv"><canvas class="zoom" data-px="16" width="16" height="16" style="width:128px;height:128px"></canvas><figcaption>16 px ×8</figcaption></figure>
+      <figure class="fv" style="align-self:center">
+        <div><div class="tabbar"><div class="tab"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" class="bc-fav"><rect width="32" height="32" rx="6" fill="#213726"/><g fill="#e3d2b1" transform="translate(2 6) scale(0.2)"><path d="M0 0L35 0C50 0 60 10 60 25C60 33.77 56.58 40.83 50.75 45.18C58.14 50.34 62.5 59.06 62.5 70C62.5 88 50.7 100 33 100L0 100L0 75Q10 75 20 75L20 90L28 90C37.28 90 42.5 82.8 42.5 70C42.5 57.2 37.28 50 28 50L20 50L20 70Q10 70 0 70L0 30Q10 30 20 30L20 40L28 40C35.68 40 40 34.6 40 25C40 15.4 35.68 10 28 10L20 10L20 25Q10 25 0 25Z"/><path d="M132.5 7.51C126.51 2.7 119.25 0 111.2 0C88.75 0 72.5 21 72.5 50C72.5 79 88.75 100 111.2 100C119.8 100 127.49 96.92 133.7 91.49L133.7 79.33C129.51 86.13 123.59 90 116.5 90C102.1 90 92.5 74 92.5 50C92.5 26 102.1 10 116.5 10C122.93 10 128.41 13.19 132.5 18.87Z"/></g></svg><span>BambooCult — Bamboo products</span><i>×</i></div></div><div class="addr"></div></div>
+        <figcaption>In a browser tab</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="abs panel pC">
+    <span class="lbl" style="position:absolute;left:18px;top:14px"><b>C</b>Website header · lockup 32 px tall</span>
+    <div class="hdr">
+      <svg xmlns="http://www.w3.org/2000/svg" class="bc-lockup is-header" viewBox="-3.5 -3.2 627.83 106.4" color="#1c221d" role="img" aria-label="BambooCult"><path class="bc-b" fill="#2e4a33" d="M-1.5 0L21.5 0C36.8 0 47 10.15 47 25.38C47 33.89 43.81 40.82 38.32 45.27C47.46 49.78 53 59.05 53 71.12C53 88.45 41.6 100 24.5 100L-1.5 100C-1.5 97.55 0 96.85 0 93L0 82C0 78.7 -1.5 78.4 -1.5 76Q8.25 77.6 18 76C18 78.4 16.5 78.7 16.5 82L16.5 88Q16.5 90.5 19 90.5L24 90.5C32.37 90.5 37.5 82.95 37.5 70.62C37.5 58.3 32.37 50.75 24 50.75L19 50.75Q16.5 50.75 16.5 53.25L16.5 67C16.5 70.3 18 70.6 18 73Q8.25 74.6 -1.5 73C-1.5 70.6 0 70.3 0 67L0 33C0 29.7 -1.5 29.4 -1.5 27Q8.25 28.6 18 27C18 29.4 16.5 29.7 16.5 33L16.5 39.75Q16.5 42.25 19 42.25L21 42.25C28.13 42.25 32.5 35.93 32.5 25.62C32.5 15.32 28.13 9 21 9L19 9Q16.5 9 16.5 11.5L16.5 18C16.5 21.3 18 21.6 18 24Q8.25 25.6 -1.5 24C-1.5 21.6 0 21.3 0 18L0 7C0 3.15 -1.5 2.45 -1.5 0Z"/><path class="bc-c" fill="#8a6430" d="M132.91 9.98C125.15 2.9 115.02 -1.2 103.5 -1.2C77.11 -1.2 58 20.3 58 50C58 79.7 77.11 101.2 103.5 101.2C115.02 101.2 125.15 97.1 132.91 90.02L132.91 74.5C129.62 80.33 125.1 86.51 119.63 89.08C115.98 90.79 111.91 91.7 107.5 91.7C88.6 91.7 76 75.02 76 50C76 24.98 88.6 8.3 107.5 8.3C111.91 8.3 115.98 9.21 119.63 10.92C125.1 13.49 129.62 19.67 132.91 25.5Z"/><text class="bc-word" x="164.03" y="80.72" fill="currentColor" font-family="'Libre Caslon Display', 'Libre Caslon Text', Georgia, serif" font-size="96" font-weight="400" letter-spacing="1.15">BambooCult</text></svg>
+      <nav><a>Home</a><a>Bamboo Oral Products</a><a>Bamboo Craft</a></nav>
+    </div>
+  </section>
+
+  <footer class="abs cap">
+    <span class="lbl" style="flex:none"><b>F</b></span>
+    <h1>Culm <em>monogram</em></h1>
+    <p>The B is a bamboo culm, its stem ringed by two nodes; the C is that culm’s section, split open between them. Green outside, tan inside.</p>
+  </footer>
+</main>
+<script>
+// draw the favicon at its true pixel size, then enlarge without smoothing so the real 16/32 px rendering is visible
+document.querySelectorAll('canvas.zoom').forEach(function (cv) {
+  var px = +cv.dataset.px, img = new Image();
+  var src = document.getElementById('fav-src').outerHTML.replace(/ id="fav-src"/, '').replace(/ width="32" height="32"/, ' width="' + px + '" height="' + px + '"');
+  img.onload = function () { var g = cv.getContext('2d'); g.clearRect(0, 0, px, px); g.drawImage(img, 0, 0, px, px); };
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(src);
+});
+</script>
+</body>
+</html>

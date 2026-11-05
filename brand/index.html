@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BambooCult — Brand</title>
+<meta name="description" content="The BambooCult wordmark: files, colours, sizes and clear space.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Libre+Caslon+Text:ital@0;1&display=swap">
+<style>
+:root {
+  --paper:#f3efe6; --paper-2:#e9e3d6; --card:#faf8f3; --ink:#1c221d; --ink-2:#4b524b; --ink-3:#737a71;
+  --line:#d9d1c0; --leaf:#2e4a33; --leaf-deep:#213726; --culm:#8a6430; --culm-soft:#e3d2b1;
+  --f-serif:"Libre Caslon Text", Georgia, serif; --f-sans:"IBM Plex Sans", system-ui, sans-serif; --f-mono:"IBM Plex Mono", monospace;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); font: 400 15px/1.55 var(--f-sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.mono { font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+h1, h2, h3 { font-family: var(--f-serif); font-weight: 400; letter-spacing: -.01em; margin: 0; }
+h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.05; }
+h1 em { font-style: italic; color: var(--culm); }
+h2 { font-size: 24px; margin: 0 0 6px; }
+p { margin: 10px 0 0; max-width: 62ch; color: var(--ink-2); }
+.top { display: flex; justify-content: space-between; align-items: center; height: 56px; border-bottom: 1px solid var(--ink); }
+.top .mono { color: var(--ink); }
+.top .mono b { font-weight: 500; color: var(--culm); }
+.hero { padding: 44px 0 36px; border-bottom: 1px solid var(--line); }
+section { padding: 40px 0; border-bottom: 1px solid var(--line); }
+section > .mono { display: block; margin-bottom: 18px; }
+.plate { display: flex; align-items: center; justify-content: center; padding: clamp(32px, 7vw, 88px) 24px; border: 1px solid var(--line); background: var(--card); }
+.plate img { display: block; width: min(100%, 760px); height: auto; }
+.plate.ink { background: var(--ink); border-color: var(--ink); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.two .plate img { width: min(100%, 440px); }
+figure { margin: 0; }
+figcaption { margin-top: 10px; font: 400 12px/1.4 var(--f-mono); color: var(--ink-3); }
+figcaption b { font-weight: 500; color: var(--ink-2); }
+.marks { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 44px; padding: 32px 28px; border: 1px solid var(--line); background: var(--card); }
+.marks figure { display: flex; flex-direction: column; align-items: center; }
+.marks img { display: block; }
+.tile { border-radius: 20%; overflow: hidden; }
+.sizes { display: grid; gap: 18px; padding: 28px; border: 1px solid var(--line); background: var(--card); }
+.size { display: grid; grid-template-columns: 180px 1fr; align-items: center; gap: 18px; }
+.size img { display: block; width: auto; }
+.size .mono { color: var(--ink-2); line-height: 1.5; }
+.size .mono small { display: block; color: var(--ink-3); letter-spacing: .08em; text-transform: none; font-size: 11px; }
+.clear { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; margin-top: 20px; padding: 28px; border: 1px solid var(--line); background: var(--card); }
+.cs { position: relative; display: inline-block; padding: 36px; border: 1px dashed var(--ink-3); }
+.cs img { display: block; height: 72px; width: auto; }
+.cs i { position: absolute; font: 500 10px/1 var(--f-mono); color: var(--culm); letter-spacing: .1em; }
+.cs i.t { top: 12px; left: 50%; transform: translateX(-50%); }
+.cs i.l { left: 10px; top: 50%; transform: translateY(-50%); }
+.cs i.r { right: 10px; top: 50%; transform: translateY(-50%); }
+.cs i.b { bottom: 12px; left: 50%; transform: translateX(-50%); }
+.cs::before { content: ""; position: absolute; inset: 36px; outline: 1px solid var(--culm); opacity: .35; pointer-events: none; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+.sw { border: 1px solid var(--line); background: var(--card); }
+.sw div { height: 88px; }
+.sw figcaption { padding: 10px 12px 12px; margin: 0; }
+.sw figcaption b { display: block; font-family: var(--f-sans); font-size: 13px; color: var(--ink); margin-bottom: 2px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 500 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+td code { font: 400 13px/1 var(--f-mono); color: var(--ink); }
+td { color: var(--ink-2); }
+.concepts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.concepts a { display: block; text-decoration: none; }
+.concepts img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--card); }
+.concepts figcaption { font-family: var(--f-sans); font-size: 14px; color: var(--ink); text-transform: none; letter-spacing: 0; }
+.concepts figcaption .mono { display: block; margin-top: 3px; }
+.concepts .chosen figcaption .mono { color: var(--culm); }
+footer { padding: 28px 0 56px; color: var(--ink-3); font-size: 13px; }
+footer p { max-width: none; color: var(--ink-3); }
+@media (max-width: 720px) {
+  .two { grid-template-columns: 1fr; }
+  .size { grid-template-columns: 1fr; gap: 8px; }
+  .clear { grid-template-columns: 1fr; }
+  .cs { padding: 24px; } .cs::before { inset: 24px; } .cs img { height: 40px; }
+  th:nth-child(3), td:nth-child(3) { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span class="mono"><b>BambooCult</b> · Brand</span><span class="mono">Wordmark “Node” · Final</span></div>
+
+  <div class="hero">
+    <h1>One word, set in Caslon, <em>cut from a culm.</em></h1>
+    <p>“BambooCult” is Libre Caslon Text redrawn as outlines, so the logo needs no web font. The capital B is drawn as a length of bamboo: its stem is split by two nodes whose ends flare like Caslon’s own bracketed serifs. Everything else is calm, carefully spaced type. Always use these outlined files, never live-typed text.</p>
+  </div>
+
+  <section>
+    <span class="mono">01 · Primary logo</span>
+    <figure>
+      <div class="plate"><img src="logo.svg" alt="BambooCult wordmark, two colours" width="580" height="84"></div>
+      <figcaption><b>logo.svg</b> · culm B #8a6430, wordmark ink #1c221d · for paper, white and light backgrounds</figcaption>
+    </figure>
+    <div class="two">
+      <figure>
+        <div class="plate ink"><img src="logo-reversed.svg" alt="BambooCult wordmark reversed" width="580" height="84"></div>
+        <figcaption><b>logo-reversed.svg</b> · B culm-soft #e3d2b1, wordmark paper #f3efe6 · for ink, leaf and photographs</figcaption>
+      </figure>
+      <figure>
+        <div class="plate"><img src="logo-one-colour.svg" alt="BambooCult wordmark in one colour" width="580" height="84"></div>
+        <figcaption><b>logo-one-colour.svg</b> · everything #1c221d · stamps, engraving, one-colour print</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <span class="mono">02 · Mark and favicon</span>
+    <div class="marks">
+      <figure><img src="mark.svg" alt="The noded B" style="height:120px;width:auto"><figcaption><b>mark.svg</b> · 120 px</figcaption></figure>
+      <figure><img class="tile" src="../apple-touch-icon.png" alt="App icon" width="180" height="180"><figcaption><b>apple-touch-icon.png</b> · 180</figcaption></figure>
+      <figure><img src="../favicon.svg" alt="Favicon at 32 px" width="32" height="32"><figcaption><b>favicon.svg</b> · 32</figcaption></figure>
+      <figure><img src="../favicon.svg" alt="Favicon at 16 px" width="16" height="16"><figcaption><b>favicon.svg</b> · 16</figcaption></figure>
+      <figure><img src="../favicon.ico" alt="favicon.ico at 32 px" width="32" height="32"><figcaption><b>favicon.ico</b> · 32</figcaption></figure>
+      <figure><img src="../favicon.ico" alt="favicon.ico at 16 px" width="16" height="16"><figcaption><b>favicon.ico</b> · 16</figcaption></figure>
+    </div>
+    <p>The favicon is a separate cut of the B fitted to the 32-pixel grid: cap line, baseline, stem edges and both node gaps land on whole pixels at 32 px and again at 16 px. The mark is the B exactly as it appears in the lockup; use it alone only where the full name is already present, and at 48 px or larger.</p>
+  </section>
+
+  <section>
+    <span class="mono">03 · Sizes and clear space</span>
+    <div class="sizes">
+      <div class="size"><img src="logo.svg" alt="" style="height:24px"><span class="mono">Website header, desktop · 24 px tall<small>The logo is 6.9 : 1, so 24 px tall is 166 px wide. Range 22–24 px.</small></span></div>
+      <div class="size"><img src="logo.svg" alt="" style="height:22px"><span class="mono">Website footer · 22 px tall<small>Reversed version on ink.</small></span></div>
+      <div class="size"><img src="logo.svg" alt="" style="height:18px"><span class="mono">Website header, mobile · 18 px tall<small>124 px wide. Range 18–20 px.</small></span></div>
+      <div class="size"><img src="logo.svg" alt="" style="height:14px"><span class="mono">Minimum · 14 px tall, 5 mm in print<small>Below this the node gaps close up; use the mark instead.</small></span></div>
+    </div>
+    <div class="clear">
+      <div class="cs"><img src="logo.svg" alt=""><i class="t">½ H</i><i class="l">½ H</i><i class="r">½ H</i><i class="b">½ H</i></div>
+      <div>
+        <h2>Clear space: half the height, all round</h2>
+        <p>Keep a margin of at least half the logo’s height (H) free on every side: at 24 px tall that is 12 px; in print at 10 mm tall it is 5 mm. Nothing else, text, rules, photographs or the page edge, comes inside it. The mark alone keeps a quarter of its height.</p>
+        <p>Scale the whole lockup together, never the B and the word separately, and never stretch, rotate, outline, shadow or recolour it beyond the three versions above.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="mono">04 · Colours</span>
+    <div class="swatches">
+      <figure class="sw"><div style="background:#1c221d"></div><figcaption><b>Ink</b>#1c221d · wordmark, text</figcaption></figure>
+      <figure class="sw"><div style="background:#8a6430"></div><figcaption><b>Culm</b>#8a6430 · the B on light backgrounds</figcaption></figure>
+      <figure class="sw"><div style="background:#f3efe6;border-bottom:1px solid var(--line)"></div><figcaption><b>Paper</b>#f3efe6 · background, reversed wordmark</figcaption></figure>
+      <figure class="sw"><div style="background:#e3d2b1"></div><figcaption><b>Culm soft</b>#e3d2b1 · the B on dark backgrounds, favicon B</figcaption></figure>
+      <figure class="sw"><div style="background:#213726"></div><figcaption><b>Leaf deep</b>#213726 · favicon and app-icon tile</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <span class="mono">05 · Files</span>
+    <table>
+      <tr><th>File</th><th>Use it for</th><th>Notes</th></tr>
+      <tr><td><code>brand/logo.svg</code></td><td>Light backgrounds: documents, print, PDFs, design tools</td><td>Fixed colours, viewBox 0 0 579.73 84</td></tr>
+      <tr><td><code>brand/logo-reversed.svg</code></td><td>Dark backgrounds, photographs</td><td>Same drawing in paper and culm-soft</td></tr>
+      <tr><td><code>brand/logo-one-colour.svg</code></td><td>Stamps, laser engraving, invoices, one-colour print</td><td>All ink; print in any single colour</td></tr>
+      <tr><td><code>brand/logo-inline.svg</code></td><td>The website only: inlined in the header and footer</td><td>B follows <code>--bc-accent</code>, the rest <code>currentColor</code></td></tr>
+      <tr><td><code>brand/logo-1600.png</code></td><td>WhatsApp profile, email signatures, Word documents</td><td>1600 × 232 px, transparent</td></tr>
+      <tr><td><code>brand/mark.svg</code></td><td>The B alone: avatars, packaging, engraving</td><td>Square viewBox, culm</td></tr>
+      <tr><td><code>favicon.svg</code> · <code>favicon.ico</code> · <code>apple-touch-icon.png</code></td><td>Browser tab, bookmarks, phone home screen</td><td>Stay in the site root</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <span class="mono">06 · The four concepts considered</span>
+    <div class="concepts">
+      <figure class="chosen"><a href="concepts/wordmark/sheet.png"><img src="concepts/wordmark/sheet.png" alt="Concept sheet: Node" loading="lazy"><figcaption>Node <span class="mono">Chosen · custom wordmark</span></figcaption></a></figure>
+      <figure><a href="concepts/seal/sheet.png"><img src="concepts/seal/sheet.png" alt="Concept sheet: Maker's seal" loading="lazy"><figcaption>Maker’s seal <span class="mono">Round stamp with a cut culm</span></figcaption></a></figure>
+      <figure><a href="concepts/monogram/sheet.png"><img src="concepts/monogram/sheet.png" alt="Concept sheet: Culm monogram" loading="lazy"><figcaption>Culm monogram <span class="mono">BC drawn as culm and section</span></figcaption></a></figure>
+      <figure><a href="concepts/geometric/sheet.png"><img src="concepts/geometric/sheet.png" alt="Concept sheet: Circle of culms" loading="lazy"><figcaption>Circle of culms <span class="mono">Three culms make one disc</span></figcaption></a></figure>
+    </div>
+    <p>The concept sheets show the drawings as reviewed. The final Node wordmark differs from its sheet in three details: the l of Cult is plain, the B’s serifs are bracketed to match its node flares, and the favicon was re-fitted to the 32-pixel grid.</p>
+  </section>
+
+  <footer><p>Type: Libre Caslon Text (SIL Open Font License), redrawn as outlines; no font is needed to show the logo. Website type: Libre Caslon and IBM Plex via Google Fonts.</p></footer>
+</div>
+</body>
+</html>

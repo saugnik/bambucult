@@ -1,0 +1,6 @@
+Lockup wordmark: Libre Caslon Display, regular (400), set as <text> in lockup.svg.
+https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap
+
+The mark (mark.svg, favicon.svg) uses no fonts: pure paths.
+The presentation sheet additionally loads IBM Plex Sans / IBM Plex Mono / Libre Caslon Text for its labels:
+https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;1,400&display=swap
